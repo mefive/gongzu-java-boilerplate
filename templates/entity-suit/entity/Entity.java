@@ -15,7 +15,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @SuperBuilder
 @NoArgsConstructor
-public class {{entityClass}} {
+public class {{entityClassName}} {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
