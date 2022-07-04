@@ -20,7 +20,6 @@ public class {{entityClassName}} {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     {{#each fields}}
 
     private {{this.type}} {{this.name}};
