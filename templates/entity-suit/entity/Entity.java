@@ -22,7 +22,7 @@ public class {{entityClassName}} {
     private Integer id;
 
     {{#each fields}}
-    private {{this.type}} {{this.name}};
 
+    private {{this.type}} {{this.name}};
     {{/each}}
 }
