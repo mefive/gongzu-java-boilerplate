@@ -21,7 +21,7 @@ public class {{entityClass}} {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    {{#each fileds}}
+    {{#each fields}}
     private {{this.type}} {{this.name}};
 
     {{/each}}
