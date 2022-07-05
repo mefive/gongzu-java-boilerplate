@@ -1,5 +1,10 @@
 package {{pkgName}}
 
+import {{pkgName}}.entity.*;
+import javax.transaction.Transactional;
+import org.mapstruct.factory.Mappers;
+import org.springframework.stereotype.Service;
+
 @Service
 public class {{entityClassName}}Service {
 
@@ -8,7 +13,7 @@ public class {{entityClassName}}Service {
 	private final {{entityClassName}}Mapper = Mappers.getMapper({{entityClassName}}Mapper.class);
 
 	public {{entityClassName}}Service({{entityClassName}}Repository {{entityName}}Repository) {
-		this.{{entityName}}Repository =  {{entityName}}Repository;
+		this.{{entityName}}Repository = {{entityName}}Repository;
 	}
 
 	@Transactional
