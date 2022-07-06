@@ -22,7 +22,7 @@ import org.springframework.data.domain.Pageable;
 public class {{entityClassName}}Controller {
 
 	@PersistenceContext
-	private final EntityManager entityManager;
+	private EntityManager entityManager;
 
 	private final {{entityClassName}}Repository {{entityName}}Repository;
 
@@ -63,4 +63,24 @@ public class {{entityClassName}}Controller {
         Page<{{entityClassName}}> {{entityNamePlural}} = {{entityName}}Repository.findAll(spec.getSpecification(), pageable);
         return {{entityNamePlural}}.map({{entityName}}Mapper::{{entityName}}To{{entityClassName}}Dto);
 	}
+
+    @PostMapping
+    {{entityClassName}}Dto save(@RequestBody @Valid {{entityClassName}}Dto {{entityName}}Dto) {
+        {{entityClassName}} {{entityName}} = {{entityName}}Service.save({{entityName}}Dto);
+        return {{entityName}}Mapper.{{entityName}}To{{entityClassName}}Dto({{entityName}});
+    }
+
+    @PutMapping("{id}")
+    {{entityClassName}}Dto update(
+        @PathVariable Integer id, 
+        @RequestBody @Valid {{entityClassName}}Dto {{entityName}}Dto
+    ) throws Exception {
+        {{entityClassName}} {{entityName}} = {{entityName}}Service.update(id, {{entityName}}Dto);
+        return {{entityName}}Mapper.{{entityName}}To{{entityClassName}}Dto({{entityName}});
+    }
+
+    @DeleteMapping("{id}")
+    void remove(@PathVariable Integer id) throws Exception {
+        {{entityName}}Service.remove(id);
+    }
 }
