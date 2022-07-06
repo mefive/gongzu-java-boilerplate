@@ -1,6 +1,5 @@
 package {{pkgName}}.controller;
 
-import cn.dev33.satoken.annotation.*;
 import {{pkgName}}.entity.*;
 import {{pkgName}}.dto.*;
 import {{pkgName}}.mapper.*;
@@ -10,7 +9,6 @@ import cn.rigongyi.gongzu.core.query.*;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.util.streamex.StreamEx;
 import javax.validation.Valid;
 import org.mapstruct.factory.Mappers;
 import org.springframework.web.bind.annotation.*;
