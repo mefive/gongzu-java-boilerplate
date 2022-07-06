@@ -1,6 +1,7 @@
 package {{pkgName}}.mapper;
 
 import {{pkgName}}.entity.*;
+import {{pkgName}}.dto.*;
 import java.util.List;
 import org.mapstruct.*;
 
