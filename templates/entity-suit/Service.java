@@ -3,6 +3,7 @@ package {{pkgName}}.service;
 import {{pkgName}}.entity.*;
 import {{pkgName}}.dto.*;
 import {{pkgName}}.repository.*;
+import {{pkgName}}.mapper.*;
 import javax.transaction.Transactional;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
