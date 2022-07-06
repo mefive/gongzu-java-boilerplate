@@ -1,4 +1,4 @@
-package {{pkgName}}
+package {{pkgName}}.repository;
 
 import {{pkgName}}.entity.*;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
