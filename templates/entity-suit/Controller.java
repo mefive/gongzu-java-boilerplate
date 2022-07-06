@@ -5,6 +5,8 @@ import {{pkgName}}.entity.*;
 import {{pkgName}}.dto.*;
 import {{pkgName}}.mapper.*;
 import {{pkgName}}.repository.*;
+import {{pkgName}}.service.*;
+import cn.rigongyi.gongzu.core.query.*;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,7 +30,7 @@ public class {{entityClassName}}Controller {
 
 	public {{entityClassName}}Controller(
 		{{entityClassName}}Repository {{entityName}}Repository,
-		{{entityClassName}}Service {{entityName}}Service,
+		{{entityClassName}}Service {{entityName}}Service
 	) {
 		this.{{entityName}}Repository = {{entityName}}Repository;
 		this.{{entityName}}Service = {{entityName}}Service;
