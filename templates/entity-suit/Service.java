@@ -1,6 +1,8 @@
 package {{pkgName}}
 
 import {{pkgName}}.entity.*;
+import {{pkgName}}.dto.*;
+import {{pkgName}}.repository.*;
 import javax.transaction.Transactional;
 import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
