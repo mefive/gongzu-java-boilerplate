@@ -61,8 +61,6 @@ public class {{entityClassName}}Controller {
                 queryRequest
         );
         Page<{{entityClassName}}> {{entityNamePlural}} = {{entityName}}Repository.findAll(spec.getSpecification(), pageable);
-        return {{entityNamePlural}}.map(
-                {{entityName}} -> {{entityName}}Mapper.{{entityName}}To{{entityClassName}}Dto({{entityName}})
-        );
+        return {{entityNamePlural}}.map({{entityName}}Mapper::{{entityName}}To{{entityClassName}}Dto);
 	}
 }
