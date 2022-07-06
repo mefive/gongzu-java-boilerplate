@@ -1,4 +1,4 @@
-package {{pkgName}}
+package {{pkgName}}.service;
 
 import {{pkgName}}.entity.*;
 import {{pkgName}}.dto.*;
@@ -12,7 +12,7 @@ public class {{entityClassName}}Service {
 
 	private final {{entityClassName}}Repository {{entityName}}Repository;
 
-	private final {{entityClassName}}Mapper = Mappers.getMapper({{entityClassName}}Mapper.class);
+	private final {{entityClassName}}Mapper {{entityName}}Mapper = Mappers.getMapper({{entityClassName}}Mapper.class);
 
 	public {{entityClassName}}Service({{entityClassName}}Repository {{entityName}}Repository) {
 		this.{{entityName}}Repository = {{entityName}}Repository;
